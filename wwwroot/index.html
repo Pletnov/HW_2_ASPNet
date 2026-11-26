@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Messages</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div id="messages"></div>
+    <button id="loadMessagesButton">load messages</button>
+
+    <form id="messages-form" method="post" action="/api/messages">
+        <h2>Add Message</h2>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required />
+
+        <label for="text">Text of email</label>
+        <input type="text" id="text" name="text" required />
+
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" />
+
+        <label for="time">Time</label>
+        <input type="time" id="time" name="time" />
+
+        <button type="submit">Add Message</button>
+    </form>
+    <form id="search-form" onsubmit="return false">
+        <h2>Search message by id</h2>
+
+        <fieldset>
+            <div>
+                <input type="radio" id="emailSearch" name="searchType" value="email" checked />
+                <label for="emailSearch">Email</label>
+            </div>
+
+            <div>
+                <input type="radio" id="idSearch" name="searchType" value="id" />
+                <label for="idSearch">Id</label>
+            </div>
+        </fieldset>
+
+        <label for="information">Information</label>
+        <input type="text" id="information" name="information" />
+        <button type="button" id="search">Search</button>
+    </form>
+</body>
+</html>

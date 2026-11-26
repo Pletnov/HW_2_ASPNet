@@ -1,0 +1,22 @@
+@HostAddress = https://localhost:7100
+
+
+GET {{HostAddress}}/api/messages
+Accept: application/json
+
+###
+GET {{HostAddress}}/api/messages/1
+Accept: application/json
+
+###
+GET {{HostAddress}}/api/messages/john@gmail.com
+Accept: application/json
+
+###
+POST {{HostAddress}}/api/messages
+Content-Type: application/x-www-form-urlencoded
+
+email=tester@gmail.com&text=Hello+from+HTTP+file&date=2026-06-01&time=12:30:00
+
+###
+DELETE {{HostAddress}}/api/messages/2
